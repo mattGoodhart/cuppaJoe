@@ -2,7 +2,7 @@
 //  Networking.swift
 //  cuppaJoe
 //
-//  Created by Alicia Goodhart on 4/19/22.
+//  Created by Matt Goodhart on 4/19/22.
 //
 
 import Foundation
@@ -23,34 +23,7 @@ class Networking {
     var imageURL : URL?
     var imageData: Data?
     
-    
-    
-    
-//    func getImageURLForRandomCoffee(endpointString: String) {
-//        //activityIndicator.startAnimating()
-//        if let url = URL(string: endpointString) {
-//
-//            URLSession.shared.dataTask(with: url) { data, response, error in
-//                guard let data = data else {
-//                    print("Download failed: \(String(describing: error))")
-//                    return
-//                }
-//                do {
-//                    let response = try JSONDecoder().decode(RandomCoffeeResponse.self, from: data)
-//                    print(response)
-//                    if let url = URL(string: response.imageString) {
-//                        DispatchQueue.main.async {
-//                            self.imageURL = url
-//                        }
-//                    }
-//                } catch {
-//                    print("JSON Parsing failed: \(error)")
-//                }
-//            }
-//            .resume()
-//        }
-//    }
-    
+//walk through this. simpler way to handle?  change do-let-tr-catch  into guard conditions? remove responsetype attribute since I'll only ever use one response?
     func getImageURLForRandomCoffee<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) {
         
         var request = URLRequest(url: url)
@@ -79,21 +52,6 @@ class Networking {
         task.resume()
     }
     
-    func fetchText(at url: URL, with completion: @escaping ((String) -> Void)) {
-        DispatchQueue.global().async {
-            guard let textData = try? String(contentsOf: url) else {
-                print("Text download failed for URL: \(url)")
-                return
-            }
-            DispatchQueue.main.async {
-                completion(textData)
-            }
-        }
-    }
-    
-    
-    
-    
     func fetchData(at url: URL, with completion: @escaping ((Data?) -> Void)) {
         DispatchQueue.global().async { //necessary?
             print("starting image download")
@@ -109,6 +67,4 @@ class Networking {
             }
         }
     }
-    
-    
 }

@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-
-
 class MainViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
@@ -17,7 +14,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var newCoffeeButton: UIButton!
     
     let endpointString: String = "https://coffee.alexflipnote.dev/random.json"
-    //var imageURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +22,6 @@ class MainViewController: UIViewController {
     }
     
     func fetchRandomCoffee() {
-      //  var imageURL = URL(string: "")
         
         self.activityIndicator.startAnimating()
         if let jsonURL = URL(string: endpointString){
@@ -57,9 +52,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    
     @IBAction func buttonHit(_sender: UIButton) {
         fetchRandomCoffee()
     }
-    
 }

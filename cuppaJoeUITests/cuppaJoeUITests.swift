@@ -2,7 +2,7 @@
 //  cuppaJoeUITests.swift
 //  cuppaJoeUITests
 //
-//  Created by Alicia Goodhart on 4/19/22.
+//  Created by Matt Goodhart on 4/19/22.
 //
 
 import XCTest

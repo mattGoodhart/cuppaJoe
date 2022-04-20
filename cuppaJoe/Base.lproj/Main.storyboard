@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,18 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="el3-O8-P2G">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okx-RA-wQ4">
-                                <rect key="frame" x="184.5" y="831" width="45" height="31"/>
-                                <buttonConfiguration key="configuration" style="gray" image="photo.circle" catalog="system">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="115.5" y="741" width="183" height="71"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Mor Joe Plz" image="photo.circle" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="filled" title="mor joe plz">
+                                    <imageReference key="image" image="photo.circle" catalog="system" symbolScale="large"/>
+                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonHitWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQu-gg-oMz"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="el3-O8-P2G">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ZdX-xT-twI">
                                 <rect key="frame" x="189.5" y="434.5" width="37" height="37"/>
                             </activityIndicatorView>
@@ -36,13 +40,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZdX-xT-twI" firstAttribute="centerY" secondItem="el3-O8-P2G" secondAttribute="centerY" id="00K-il-aTS"/>
-                            <constraint firstItem="okx-RA-wQ4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0345982" id="6Nv-fy-BmD"/>
+                            <constraint firstItem="okx-RA-wQ4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" constant="26.199999999999996" id="6Nv-fy-BmD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="el3-O8-P2G" secondAttribute="trailing" id="8b7-uf-mAu"/>
                             <constraint firstItem="okx-RA-wQ4" firstAttribute="centerX" secondItem="el3-O8-P2G" secondAttribute="centerX" id="PYs-Re-yq0"/>
                             <constraint firstItem="ZdX-xT-twI" firstAttribute="centerX" secondItem="el3-O8-P2G" secondAttribute="centerX" constant="1" id="Qtl-Lr-u2t"/>
-                            <constraint firstItem="okx-RA-wQ4" firstAttribute="bottom" secondItem="el3-O8-P2G" secondAttribute="bottom" id="W6P-4M-ODM"/>
+                            <constraint firstItem="okx-RA-wQ4" firstAttribute="bottom" secondItem="el3-O8-P2G" secondAttribute="bottom" constant="-50" id="W6P-4M-ODM"/>
                             <constraint firstItem="el3-O8-P2G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WDK-ue-RO5"/>
-                            <constraint firstItem="okx-RA-wQ4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.108696" id="bFO-t6-qh4"/>
+                            <constraint firstItem="okx-RA-wQ4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.108696" constant="138" id="bFO-t6-qh4"/>
                             <constraint firstItem="el3-O8-P2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wCm-b4-1yY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="el3-O8-P2G" secondAttribute="bottom" id="wKc-y8-jPT"/>
                         </constraints>

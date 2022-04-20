@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  cuppaJoe
 //
-//  Created by Alicia Goodhart on 4/19/22.
+//  Created by Matt Goodhart on 4/19/22.
 //
 
 import UIKit
